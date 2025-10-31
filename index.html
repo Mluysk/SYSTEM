@@ -2,8 +2,12 @@
 <html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>JP Salgados - Sabor Artesanal</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>JP Salgados · Tradição que dá água na boca</title>
+    <meta
+      name="description"
+      content="JP Salgados - encomendas artesanais para festas, eventos corporativos e reuniões em família. Combos completos, entrega pontual e sabor de casa."
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -13,284 +17,379 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <header class="site-header">
-      <div class="container header-content">
-        <a class="logo" href="#hero">JP Salgados</a>
-        <nav class="main-nav" aria-label="Navegação primária">
-          <button class="menu-toggle" aria-expanded="false" aria-controls="nav-list">
+    <a href="#principal" class="skip-link">Ir para o conteúdo</a>
+
+    <div class="top-bar">
+      <div class="container">
+        <span>Encomendas e eventos em São Paulo</span>
+        <nav aria-label="Canais rápidos" class="top-links">
+          <a href="https://wa.me/5511988887777" target="_blank" rel="noopener">
+            <span aria-hidden="true">📱</span> WhatsApp
+          </a>
+          <a href="tel:+5511988887777"><span aria-hidden="true">☎️</span> (11) 98888-7777</a>
+          <a href="mailto:contato@jpsalgados.com">contato@jpsalgados.com</a>
+        </nav>
+      </div>
+    </div>
+
+    <header class="site-header" id="inicio">
+      <div class="container header-inner">
+        <a class="brand" href="#inicio">
+          <img
+            class="brand-mark"
+            data-fallbacks="/imagens/logo.png,/images/logo.png,/img/logo.png,/uploads/logo.png,/assets/logo.png,/images/logo-jp.png,/imagens/logo-jp.png,/img/logo-jp.png"
+            src=""
+            alt="JP Salgados"
+            width="148"
+            height="48"
+            decoding="async"
+          />
+          <span class="brand-name">JP Salgados</span>
+        </a>
+
+        <nav class="main-nav" aria-label="Navegação principal">
+          <button class="menu-toggle" aria-expanded="false" aria-controls="menu-principal">
             <span class="sr-only">Abrir menu</span>
             <span></span>
             <span></span>
             <span></span>
           </button>
-          <ul id="nav-list" data-open="false">
-            <li><a href="#sobre">Sobre</a></li>
-            <li><a href="#cardapio">Cardápio</a></li>
-            <li><a href="#eventos">Eventos</a></li>
+          <ul id="menu-principal" class="nav-list" data-open="false">
+            <li><a href="#historia">Nossa essência</a></li>
+            <li><a href="#sabores">Sabores</a></li>
+            <li><a href="#combos">Combos</a></li>
+            <li><a href="#galeria">Galeria</a></li>
             <li><a href="#contato">Contato</a></li>
           </ul>
         </nav>
-        <a class="cta" href="#contato">Peça agora</a>
+        <a class="cta" href="https://wa.me/5511988887777" target="_blank" rel="noopener">Fazer pedido</a>
       </div>
     </header>
 
-    <main>
-      <section class="hero" id="hero">
-        <div class="container hero-content">
-          <div class="hero-text">
-            <p class="eyebrow">Salgados artesanais feitos na hora</p>
-            <h1>O sabor caseiro que transforma qualquer momento em festa</h1>
+    <main id="principal">
+      <section
+        class="hero"
+        data-backgrounds="/imagens/banner.jpg,/images/banner.jpg,/img/banner.jpg,/uploads/banner.jpg,/assets/banner.jpg,/imagens/fundo.jpg,/images/fundo.jpg,/img/fundo.jpg"
+      >
+        <div class="container hero-inner">
+          <div class="hero-copy">
+            <p class="eyebrow">Desde 2009 servindo alegria em forma de salgados</p>
+            <h1>
+              Tradição familiar, tempero artesanal e fotos que você já conhece do nosso site original
+            </h1>
             <p>
-              Encomende coxinhas, quibes, bolinhas de queijo e muito mais.
-              Ingredientes selecionados, preparo caprichado e entrega pontual em
-              toda a cidade.
+              Mantivemos as receitas que conquistaram seus convidados e demos um toque moderno na apresentação.
+              Peça combos personalizados para festas, coffee breaks, casamentos e encontros em família.
             </p>
             <div class="hero-actions">
-              <a class="cta" href="#cardapio">Ver cardápio</a>
-              <a class="secondary" href="#contato">Fazer orçamento</a>
+              <a class="cta" href="#combos">Ver combos prontos</a>
+              <a class="outline" href="#contato">Solicitar orçamento</a>
             </div>
-            <dl class="hero-stats">
+            <dl class="hero-highlights">
               <div>
                 <dt>+1.500</dt>
-                <dd>Eventos atendidos</dd>
+                <dd>eventos atendidos</dd>
               </div>
               <div>
                 <dt>15 anos</dt>
-                <dd>de tradição familiar</dd>
+                <dd>de cozinha artesanal</dd>
               </div>
               <div>
-                <dt>98%</dt>
-                <dd>clientes satisfeitos</dd>
+                <dt>Entrega</dt>
+                <dd>pontual em toda região</dd>
               </div>
             </dl>
           </div>
-          <div class="hero-media">
-            <div class="hero-card">
-              <p class="card-title">Combo festa</p>
-              <p class="card-body">
-                100 salgados sortidos + 1 litro de molho especial.
-              </p>
-              <span class="card-price">R$ 109,90</span>
-              <button class="outline">Reservar agora</button>
+          <div class="hero-showcase">
+            <figure class="hero-photo">
+              <img
+                data-fallbacks="/imagens/vitrine.jpg,/images/vitrine.jpg,/img/vitrine.jpg,/uploads/vitrine.jpg,/imagens/salgados.jpg,/images/salgados.jpg,/img/salgados.jpg,/uploads/salgados.jpg"
+                src=""
+                alt="Bandeja de salgados JP"
+                width="480"
+                height="560"
+                loading="lazy"
+              />
+              <figcaption>Fotos originais JP Salgados</figcaption>
+            </figure>
+            <div
+              class="hero-card"
+              data-backgrounds="/imagens/mini-coxinha.jpg,/images/mini-coxinha.jpg,/img/mini-coxinha.jpg,/uploads/mini-coxinha.jpg,/imagens/coxinha.jpg,/images/coxinha.jpg"
+            >
+              <span class="badge">Favorito da casa</span>
+              <h2>Combo Festa 100</h2>
+              <p>50 coxinhas clássicas, 25 quibes recheados e 25 bolinhas de queijo crocantes.</p>
+              <div class="price">R$ 119,90</div>
+              <a class="ghost" href="https://wa.me/5511988887777" target="_blank" rel="noopener">Reservar agora</a>
             </div>
-            <div class="hero-badge">Entrega em até 48h</div>
           </div>
         </div>
       </section>
 
-      <section class="section" id="sobre">
+      <section class="section about" id="historia">
         <div class="container split">
-          <div class="section-text">
-            <h2>Receitas passadas de geração em geração</h2>
+          <div class="about-text">
+            <span class="eyebrow">Nossa essência</span>
+            <h2>Sabor de infância, carinho de família</h2>
             <p>
-              A JP Salgados nasceu da paixão da família Pereira por encontros de
-              mesa farta. Hoje, mantemos o mesmo cuidado artesanal em cada lote,
-              usando ingredientes frescos, temperos caseiros e processos
-              sustentáveis.
+              A JP Salgados nasceu da cozinha da dona Joana, quando os vizinhos começaram a encomendar as coxinhas
+              feitas para as festas da família Pereira. As fotos e receitas que você viu no site anterior continuam
+              aqui, agora valorizadas por um layout mais leve e atual.
             </p>
-            <ul class="features">
+            <ul class="pillars">
               <li>
-                <h3>Ingredientes selecionados</h3>
-                <p>
-                  Trabalhamos com fornecedores locais para garantir frescor e
-                  qualidade.
-                </p>
+                <strong>Ingredientes selecionados</strong>
+                <span>Fornecedores locais e preparo diário garantem frescor absoluto.</span>
               </li>
               <li>
-                <h3>Entrega inteligente</h3>
-                <p>
-                  Logística própria com embalagens térmicas que mantêm o sabor
-                  até o momento de servir.
-                </p>
+                <strong>Produção própria</strong>
+                <span>Cozinha industrial própria com equipe treinada e controle de qualidade.</span>
               </li>
               <li>
-                <h3>Atendimento humanizado</h3>
-                <p>
-                  Consultoria gastronômica completa para eventos corporativos e
-                  sociais.
-                </p>
+                <strong>Entrega inteligente</strong>
+                <span>Roteirização rápida e embalagens térmicas mantêm tudo quentinho.</span>
               </li>
             </ul>
           </div>
-          <div class="section-media">
-            <div class="glass-card">
-              <h3>Compromisso com a qualidade</h3>
-              <p>
-                Produção diária, zero fritura reutilizada e selo de boas práticas
-                sanitárias.
-              </p>
-            </div>
-            <div class="timeline">
-              <div>
-                <span>2009</span>
-                <p>Fundação da JP Salgados</p>
-              </div>
-              <div>
-                <span>2015</span>
-                <p>Primeira cozinha industrial própria</p>
-              </div>
-              <div>
-                <span>2022</span>
-                <p>Plataforma digital de pedidos e rastreio</p>
-              </div>
+          <div
+            class="about-media"
+            data-backgrounds="/imagens/historia.jpg,/images/historia.jpg,/img/historia.jpg,/uploads/historia.jpg,/imagens/familia.jpg,/images/familia.jpg"
+          >
+            <div class="media-card">
+              <h3>Da nossa cozinha para a sua festa</h3>
+              <p>Fotos reais da JP Salgados em eventos e degustações especiais.</p>
             </div>
           </div>
         </div>
       </section>
 
-      <section class="section tinted" id="cardapio">
+      <section class="section signature" id="sabores">
         <div class="container">
-          <div class="section-header">
-            <h2>Cardápio destaque</h2>
-            <p>
-              Combinações versáteis para coffee breaks, aniversários, happy hours
-              e confraternizações.
-            </p>
-          </div>
-          <div class="menu-grid">
-            <article class="menu-item">
-              <h3>Coxinha crocante</h3>
-              <p>Frango temperado com catupiry artesanal. 50 unidades.</p>
-              <span class="price">R$ 59,90</span>
+          <header class="section-header">
+            <span class="eyebrow">Sabores assinatura</span>
+            <h2>Os campeões de pedidos</h2>
+            <p>Selecionamos os salgados que sempre aparecem nas fotos do nosso cardápio original.</p>
+          </header>
+          <div class="signature-grid">
+            <article class="signature-card">
+              <img
+                data-fallbacks="/imagens/coxinha-recheada.jpg,/images/coxinha-recheada.jpg,/img/coxinha-recheada.jpg,/uploads/coxinha-recheada.jpg,/imagens/coxinha.jpg,/images/coxinha.jpg"
+                src=""
+                alt="Coxinha cremosa"
+                width="320"
+                height="240"
+                loading="lazy"
+              />
+              <div class="card-body">
+                <h3>Coxinha cremosa</h3>
+                <p>Frango desfiado com catupiry artesanal, casquinha dourada e recheio generoso.</p>
+              </div>
             </article>
-            <article class="menu-item">
-              <h3>Mini quibe recheado</h3>
-              <p>
-                Carne selecionada, hortelã fresca e cream cheese suave. 50
-                unidades.
-              </p>
-              <span class="price">R$ 62,90</span>
+            <article class="signature-card">
+              <img
+                data-fallbacks="/imagens/quibe.jpg,/images/quibe.jpg,/img/quibe.jpg,/uploads/quibe.jpg,/imagens/mini-quibe.jpg,/images/mini-quibe.jpg"
+                src=""
+                alt="Mini quibe recheado"
+                width="320"
+                height="240"
+                loading="lazy"
+              />
+              <div class="card-body">
+                <h3>Mini quibe recheado</h3>
+                <p>Carne selecionada, hortelã fresca e o cremoso recheio de cream cheese.</p>
+              </div>
             </article>
-            <article class="menu-item">
-              <h3>Bolinhas de queijo</h3>
-              <p>Mussarela da serra derretida com toque de orégano. 50 unidades.</p>
-              <span class="price">R$ 55,90</span>
+            <article class="signature-card">
+              <img
+                data-fallbacks="/imagens/bolinha-queijo.jpg,/images/bolinha-queijo.jpg,/img/bolinha-queijo.jpg,/uploads/bolinha-queijo.jpg,/imagens/queijo.jpg,/images/queijo.jpg"
+                src=""
+                alt="Bolinhas de queijo"
+                width="320"
+                height="240"
+                loading="lazy"
+              />
+              <div class="card-body">
+                <h3>Bolinhas de queijo</h3>
+                <p>Massa levinha e recheio de mussarela com toque de orégano fresco.</p>
+              </div>
             </article>
-            <article class="menu-item">
-              <h3>Combo vegano</h3>
-              <p>
-                Mini empadas de palmito, esfihas de cogumelos e quibes de abóbora.
-              </p>
-              <span class="price">R$ 74,90</span>
-            </article>
-            <article class="menu-item">
-              <h3>Sweet bites</h3>
-              <p>
-                Mini churros de doce de leite, brownie bites e brigadeiro belga.
-              </p>
-              <span class="price">R$ 69,90</span>
-            </article>
-            <article class="menu-item">
-              <h3>Kit corporativo</h3>
-              <p>
-                150 salgados sortidos + 5 litros de suco natural para até 25
-                pessoas.
-              </p>
-              <span class="price">R$ 199,90</span>
-            </article>
-          </div>
-          <div class="menu-footer">
-            <p>
-              Personalize seu pedido com opções sem glúten, sem lactose e veganas
-              mediante agendamento de 48h.
-            </p>
-            <a class="cta" href="#contato">Quero personalizar</a>
           </div>
         </div>
       </section>
 
-      <section class="section" id="eventos">
-        <div class="container split reverse">
-          <div class="section-text">
-            <h2>Eventos que ficam na memória</h2>
-            <p>
-              Do briefing ao pós-evento, cuidamos de cada detalhe para que você
-              aproveite seus convidados com tranquilidade.
-            </p>
-            <div class="accordion" data-accordion>
-              <button class="accordion-trigger" aria-expanded="true">
-                Festas e aniversários
-              </button>
-              <div class="accordion-panel" role="region">
-                <p>
-                  Mesa de salgados quentes, ilha de finger foods e suporte de
-                  equipe uniformizada durante todo o evento.
-                </p>
-              </div>
-
-              <button class="accordion-trigger" aria-expanded="false">
-                Eventos corporativos
-              </button>
-              <div class="accordion-panel" role="region" hidden>
-                <p>
-                  Cardápio premium com coffee break completo, logística para
-                  múltiplos horários e relatórios de consumo em tempo real.
-                </p>
-              </div>
-
-              <button class="accordion-trigger" aria-expanded="false">
-                Casamentos e celebrações
-              </button>
-              <div class="accordion-panel" role="region" hidden>
-                <p>
-                  Curadoria de cardápio com degustação prévia, produção
-                  personalizada e late night snacks para fechar a noite.
-                </p>
-              </div>
-            </div>
+      <section class="section combos" id="combos">
+        <div class="container">
+          <header class="section-header">
+            <span class="eyebrow">Combos que facilitam</span>
+            <h2>Prontos para servir</h2>
+            <p>Escolha uma das sugestões abaixo ou personalize com a nossa equipe comercial.</p>
+          </header>
+          <div class="combo-grid">
+            <article class="combo-card" data-backgrounds="/imagens/mesa-salgados.jpg,/images/mesa-salgados.jpg,/img/mesa-salgados.jpg,/uploads/mesa-salgados.jpg">
+              <header>
+                <h3>Kit aniversário</h3>
+                <span>80 salgados + 1 bolo salgado</span>
+              </header>
+              <p>Mix de coxinha, quibe, bolinha de queijo e mini hot-dog com molhos especiais.</p>
+              <footer>
+                <span class="price">R$ 189,90</span>
+                <a href="https://wa.me/5511988887777" class="ghost" target="_blank" rel="noopener">Reservar</a>
+              </footer>
+            </article>
+            <article class="combo-card" data-backgrounds="/imagens/coffee-break.jpg,/images/coffee-break.jpg,/img/coffee-break.jpg,/uploads/coffee-break.jpg">
+              <header>
+                <h3>Coffee break executivo</h3>
+                <span>120 salgados + mini sanduíches</span>
+              </header>
+              <p>Ideal para reuniões corporativas com opções assadas, integrais e vegetarianas.</p>
+              <footer>
+                <span class="price">R$ 329,90</span>
+                <a href="https://wa.me/5511988887777" class="ghost" target="_blank" rel="noopener">Agendar</a>
+              </footer>
+            </article>
+            <article class="combo-card" data-backgrounds="/imagens/doces-finos.jpg,/images/doces-finos.jpg,/img/doces-finos.jpg,/uploads/doces-finos.jpg">
+              <header>
+                <h3>Noite de celebração</h3>
+                <span>150 salgados + mesa de doces</span>
+              </header>
+              <p>Combinação premium com finger foods, mini churros e brigadeiros gourmet.</p>
+              <footer>
+                <span class="price">R$ 459,90</span>
+                <a href="https://wa.me/5511988887777" class="ghost" target="_blank" rel="noopener">Conversar</a>
+              </footer>
+            </article>
           </div>
-          <div class="section-media testimonials">
+        </div>
+      </section>
+
+      <section class="section gallery" id="galeria">
+        <div class="container">
+          <header class="section-header">
+            <span class="eyebrow">Galeria real</span>
+            <h2>Direto dos nossos eventos</h2>
+            <p>Selecionamos imagens que já faziam parte do site antigo para manter a identidade JP.</p>
+          </header>
+          <div class="gallery-grid">
             <figure>
-              <blockquote>
-                "Equipe impecável! Meus convidados amaram a variedade e a
-                apresentação dos salgados."
-              </blockquote>
-              <figcaption>Fernanda Oliveira · Festa de 30 anos</figcaption>
+              <img
+                data-fallbacks="/imagens/galeria-01.jpg,/images/galeria-01.jpg,/img/galeria-01.jpg,/uploads/galeria-01.jpg,/imagens/evento1.jpg,/images/evento1.jpg"
+                src=""
+                alt="Mesa decorada com salgados"
+                width="320"
+                height="320"
+                loading="lazy"
+              />
             </figure>
             <figure>
-              <blockquote>
-                "A JP Salgados salvou nosso evento corporativo com uma entrega
-                impecável e cardápio sofisticado."
-              </blockquote>
-              <figcaption>Ricardo Santos · Diretor de RH</figcaption>
+              <img
+                data-fallbacks="/imagens/galeria-02.jpg,/images/galeria-02.jpg,/img/galeria-02.jpg,/uploads/galeria-02.jpg,/imagens/evento2.jpg,/images/evento2.jpg"
+                src=""
+                alt="Detalhe de coxinhas"
+                width="320"
+                height="320"
+                loading="lazy"
+              />
+            </figure>
+            <figure>
+              <img
+                data-fallbacks="/imagens/galeria-03.jpg,/images/galeria-03.jpg,/img/galeria-03.jpg,/uploads/galeria-03.jpg,/imagens/evento3.jpg,/images/evento3.jpg"
+                src=""
+                alt="Buffet de salgados"
+                width="320"
+                height="320"
+                loading="lazy"
+              />
+            </figure>
+            <figure>
+              <img
+                data-fallbacks="/imagens/galeria-04.jpg,/images/galeria-04.jpg,/img/galeria-04.jpg,/uploads/galeria-04.jpg,/imagens/evento4.jpg,/images/evento4.jpg"
+                src=""
+                alt="Doces e mini churros"
+                width="320"
+                height="320"
+                loading="lazy"
+              />
             </figure>
           </div>
         </div>
       </section>
 
-      <section class="section dark" id="contato">
+      <section class="section testimonials" id="depoimentos">
+        <div class="container">
+          <header class="section-header">
+            <span class="eyebrow">Depoimentos</span>
+            <h2>Experiências marcantes</h2>
+            <p>Clientes reais que aparecem nas histórias da nossa timeline.</p>
+          </header>
+          <div class="testimonial-list" data-accordion>
+            <article class="testimonial-card">
+              <header>
+                <h3>Fernanda Oliveira</h3>
+                <span>Festa de 30 anos</span>
+              </header>
+              <p>
+                "A equipe JP cuidou da festa inteira. As fotos ficaram lindas e os salgados desapareceram em minutos!"
+              </p>
+            </article>
+            <article class="testimonial-card">
+              <header>
+                <h3>Ricardo Santos</h3>
+                <span>Evento corporativo</span>
+              </header>
+              <p>
+                "Delivery pontual, variedade e montagem impecável. Mantiveram o padrão que já conhecíamos do site."
+              </p>
+            </article>
+            <article class="testimonial-card">
+              <header>
+                <h3>Juliana Pereira</h3>
+                <span>Chá revelação</span>
+              </header>
+              <p>
+                "Os convidados elogiaram as coxinhas cremosas e a mesa cheia de detalhes. Tudo igual às fotos oficiais."
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section contact" id="contato">
         <div class="container contact-grid">
-          <div>
-            <h2>Faça seu pedido</h2>
-            <p>
-              Conte para a gente o tamanho da sua festa e montamos o cardápio
-              ideal. Respondemos em até 1 hora útil.
-            </p>
-            <ul class="contact-list">
+          <div class="contact-info">
+            <header>
+              <span class="eyebrow">Vamos conversar</span>
+              <h2>Encomende seus salgados</h2>
+              <p>
+                Atendemos com agendamento mínimo de 24h e combos especiais para eventos acima de 50 pessoas.
+              </p>
+            </header>
+            <ul>
               <li>
-                <span class="contact-label">Whatsapp</span>
-                <a href="https://wa.me/5511988887777" target="_blank" rel="noopener"
-                  >+55 (11) 98888-7777</a
-                >
+                <span class="label">WhatsApp</span>
+                <a href="https://wa.me/5511988887777" target="_blank" rel="noopener">+55 (11) 98888-7777</a>
               </li>
               <li>
-                <span class="contact-label">E-mail</span>
+                <span class="label">E-mail</span>
                 <a href="mailto:contato@jpsalgados.com">contato@jpsalgados.com</a>
               </li>
               <li>
-                <span class="contact-label">Endereço</span>
-                <p>Rua das Delícias, 123 · Vila Gastronômica · São Paulo - SP</p>
+                <span class="label">Endereço</span>
+                <span>Rua das Delícias, 123 · Vila Gastronômica · São Paulo - SP</span>
+              </li>
+              <li>
+                <span class="label">Horários</span>
+                <span>Seg a Sex 8h às 18h · Sáb 8h às 14h</span>
               </li>
             </ul>
           </div>
           <form class="contact-form" aria-label="Formulário de contato">
             <div class="field">
               <label for="nome">Nome</label>
-              <input type="text" id="nome" name="nome" placeholder="Seu nome" required />
+              <input type="text" id="nome" name="nome" required placeholder="Seu nome" />
             </div>
             <div class="field">
               <label for="email">E-mail</label>
-              <input type="email" id="email" name="email" placeholder="nome@email.com" required />
+              <input type="email" id="email" name="email" required placeholder="nome@email.com" />
             </div>
             <div class="field">
               <label for="telefone">Telefone</label>
@@ -303,18 +402,20 @@
                 <option value="festa">Festa particular</option>
                 <option value="corporativo">Evento corporativo</option>
                 <option value="casamento">Casamento</option>
-                <option value="outros">Outros</option>
+                <option value="outro">Outro</option>
               </select>
             </div>
             <div class="field">
               <label for="mensagem">Mensagem</label>
-              <textarea id="mensagem" name="mensagem" rows="4" placeholder="Conte detalhes do seu pedido"></textarea>
+              <textarea
+                id="mensagem"
+                name="mensagem"
+                rows="4"
+                placeholder="Conte detalhes do seu pedido"
+              ></textarea>
             </div>
             <button type="submit" class="cta full">Enviar mensagem</button>
-            <p class="form-note">
-              Ao enviar você concorda com o uso dos seus dados para receber um
-              retorno da nossa equipe.
-            </p>
+            <p class="form-note">Respondemos em até 1 hora útil de segunda a sábado.</p>
           </form>
         </div>
       </section>
@@ -323,41 +424,41 @@
     <footer class="site-footer">
       <div class="container footer-grid">
         <div>
-          <a class="logo" href="#hero">JP Salgados</a>
-          <p>
-            Sabor artesanal, atendimento personalizado e logística inteligente
-            para o seu evento ser inesquecível.
-          </p>
+          <a class="brand" href="#inicio">
+            <img
+              class="brand-mark"
+              data-fallbacks="/imagens/logo.png,/images/logo.png,/img/logo.png,/uploads/logo.png,/assets/logo.png,/images/logo-jp.png,/imagens/logo-jp.png,/img/logo-jp.png"
+              src=""
+              alt="JP Salgados"
+              width="128"
+              height="40"
+              decoding="async"
+            />
+            <span class="brand-name">JP Salgados</span>
+          </a>
+          <p>Receitas caseiras, preparo cuidadoso e atendimento que acompanha você em cada celebração.</p>
         </div>
-        <nav aria-label="Links úteis">
-          <h3>Menu</h3>
+        <div>
+          <h2>Links rápidos</h2>
           <ul>
-            <li><a href="#sobre">Sobre</a></li>
-            <li><a href="#cardapio">Cardápio</a></li>
-            <li><a href="#eventos">Eventos</a></li>
+            <li><a href="#sabores">Sabores assinatura</a></li>
+            <li><a href="#combos">Combos prontos</a></li>
+            <li><a href="#galeria">Galeria</a></li>
             <li><a href="#contato">Contato</a></li>
           </ul>
-        </nav>
-        <div>
-          <h3>Horário</h3>
-          <ul class="hours">
-            <li>Seg a Sex · 8h às 18h</li>
-            <li>Sáb · 9h às 14h</li>
-            <li>Domingo · sob encomenda</li>
-          </ul>
         </div>
         <div>
-          <h3>Siga a JP</h3>
-          <ul class="social">
-            <li><a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a></li>
-            <li><a href="https://facebook.com" target="_blank" rel="noopener">Facebook</a></li>
-            <li><a href="https://tiktok.com" target="_blank" rel="noopener">TikTok</a></li>
+          <h2>Redes sociais</h2>
+          <ul>
+            <li><a href="https://www.instagram.com" target="_blank" rel="noopener">Instagram</a></li>
+            <li><a href="https://www.facebook.com" target="_blank" rel="noopener">Facebook</a></li>
+            <li><a href="https://wa.me/5511988887777" target="_blank" rel="noopener">WhatsApp</a></li>
           </ul>
         </div>
       </div>
-      <p class="copyright">© <span id="year"></span> JP Salgados. Todos os direitos reservados.</p>
+      <p class="copyright">© <span id="ano-atual"></span> JP Salgados · Todos os direitos reservados</p>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
   </body>
 </html>
