@@ -1,74 +1,121 @@
-const bodyElement = document.body;
-const motionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
-let shouldReduceMotion = motionQuery.matches;
+const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+let reduceMotion = prefersReducedMotion.matches;
 
-const setMotionPreference = (matches) => {
-  shouldReduceMotion = matches;
-  document.documentElement.classList.toggle('reduced-motion', matches);
-  if (!bodyElement) return;
-  if (matches) {
-    bodyElement.classList.remove('animations-ready');
-  } else {
-    bodyElement.classList.add('animations-ready');
-  }
-};
-
-setMotionPreference(shouldReduceMotion);
-
-const handleMotionChange = (event) => setMotionPreference(event.matches);
-if (typeof motionQuery.addEventListener === 'function') {
-  motionQuery.addEventListener('change', handleMotionChange);
-} else if (typeof motionQuery.addListener === 'function') {
-  motionQuery.addListener(handleMotionChange);
-}
-
-const yearSpan = document.getElementById('year');
-if (yearSpan) {
-  yearSpan.textContent = new Date().getFullYear();
+const yearEl = document.getElementById('year');
+if (yearEl) {
+  yearEl.textContent = new Date().getFullYear();
 }
 
 const scrollButton = document.querySelector('.scroll-top');
 const toggleScrollButton = () => {
   if (!scrollButton) return;
-  if (window.scrollY > 400) {
-    scrollButton.classList.add('visible');
+  if (window.scrollY > 320) {
+    scrollButton.classList.add('is-visible');
   } else {
-    scrollButton.classList.remove('visible');
+    scrollButton.classList.remove('is-visible');
   }
 };
 
-window.addEventListener('scroll', toggleScrollButton);
-toggleScrollButton();
+const smoothScrollTo = (element) => {
+  element.scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth', block: 'start' });
+};
+
 scrollButton?.addEventListener('click', () => {
-  window.scrollTo({ top: 0, behavior: shouldReduceMotion ? 'auto' : 'smooth' });
+  window.scrollTo({ top: 0, behavior: reduceMotion ? 'auto' : 'smooth' });
 });
 
-document.querySelectorAll('nav a, .hero__cta .btn-glass').forEach((link) => {
+document.querySelectorAll('.topbar__nav a').forEach((link) => {
   link.addEventListener('click', (event) => {
     const target = event.currentTarget;
     if (target instanceof HTMLAnchorElement && target.hash) {
-      event.preventDefault();
       const section = document.querySelector(target.hash);
-      section?.scrollIntoView({ behavior: shouldReduceMotion ? 'auto' : 'smooth', block: 'start' });
+      if (section) {
+        event.preventDefault();
+        smoothScrollTo(section);
+      }
     }
   });
 });
 
-if ('IntersectionObserver' in window) {
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        }
-      });
-    },
-    { threshold: 0.2 }
-  );
+window.addEventListener('scroll', toggleScrollButton);
+toggleScrollButton();
 
-  document.querySelectorAll('.card, .service-card, .case-card, .insight-card').forEach((element) => {
-    observer.observe(element);
-  });
-} else if (bodyElement) {
-  bodyElement.classList.remove('animations-ready');
+let startAutoSlide = () => {};
+let stopAutoSlide = () => {};
+
+const slider = document.querySelector('.hero__slides');
+if (slider) {
+  const slides = Array.from(slider.children);
+  let activeIndex = 0;
+  const prevButton = document.querySelector('.hero__control--prev');
+  const nextButton = document.querySelector('.hero__control--next');
+  const total = slides.length;
+
+  const updateSlider = () => {
+    if (!slides[0]) return;
+    const styles = getComputedStyle(slider);
+    const isStacked = styles.gridAutoFlow.includes('row');
+    if (isStacked) {
+      slider.style.transform = 'translateX(0)';
+      return;
+    }
+    const gap = parseFloat(styles.columnGap || '24');
+    const offset = -activeIndex * (slides[0].clientWidth + gap);
+    slider.style.transform = `translateX(${offset}px)`;
+  };
+
+  const goTo = (index) => {
+    activeIndex = (index + total) % total;
+    updateSlider();
+  };
+
+  prevButton?.addEventListener('click', () => goTo(activeIndex - 1));
+  nextButton?.addEventListener('click', () => goTo(activeIndex + 1));
+
+  let autoSlideId;
+  startAutoSlide = () => {
+    if (reduceMotion || autoSlideId) return;
+    autoSlideId = window.setInterval(() => {
+      goTo(activeIndex + 1);
+    }, 5000);
+  };
+
+  stopAutoSlide = () => {
+    if (!autoSlideId) return;
+    window.clearInterval(autoSlideId);
+    autoSlideId = undefined;
+  };
+
+  slider.addEventListener('pointerenter', stopAutoSlide);
+  slider.addEventListener('pointerleave', startAutoSlide);
+  prevButton?.addEventListener('pointerenter', stopAutoSlide);
+  nextButton?.addEventListener('pointerenter', stopAutoSlide);
+  prevButton?.addEventListener('pointerleave', startAutoSlide);
+  nextButton?.addEventListener('pointerleave', startAutoSlide);
+
+  if (typeof ResizeObserver === 'function') {
+    const resizeObserver = new ResizeObserver(() => updateSlider());
+    slides.forEach((slide) => resizeObserver.observe(slide));
+  }
+
+  updateSlider();
 }
+
+const applyMotionPreference = (matches) => {
+  reduceMotion = matches;
+  document.documentElement.classList.toggle('reduced-motion', matches);
+  if (matches) {
+    stopAutoSlide();
+  } else {
+    startAutoSlide();
+  }
+};
+
+applyMotionPreference(reduceMotion);
+if (typeof prefersReducedMotion.addEventListener === 'function') {
+  prefersReducedMotion.addEventListener('change', (event) => applyMotionPreference(event.matches));
+} else if (typeof prefersReducedMotion.addListener === 'function') {
+  prefersReducedMotion.addListener((event) => applyMotionPreference(event.matches));
+}
+
+startAutoSlide();
