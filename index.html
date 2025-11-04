@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Next Tech Assistência Técnica</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="topbar__brand">
+        <div class="topbar__logo" aria-hidden="true">NT</div>
+        <div class="topbar__title" aria-label="Next Tech">
+          <span>Next</span>
+          <span>Tech</span>
+        </div>
+      </div>
+      <nav class="topbar__nav" aria-label="Menu principal">
+        <a href="#produtos">Produtos</a>
+        <a href="#manutencao">Manutenção</a>
+        <a href="#suporte">Suporte</a>
+        <a href="#garantia">Garantia</a>
+        <a href="#sobre">Sobre</a>
+      </nav>
+      <button class="topbar__login" type="button">Área ADM</button>
+    </header>
+
+    <main>
+      <section class="hero" id="inicio">
+        <div class="hero__content">
+          <div class="hero__badge">Assistência premium</div>
+          <h1>
+            Cuidamos do seu smartphone e computador com qualidade de quem
+            entende de tecnologia.
+          </h1>
+          <p>
+            A Next Tech combina diagnóstico inteligente, peças originais e um
+            atendimento humanizado para reparar, proteger e atualizar seus
+            dispositivos. Conte com nossa equipe certificada.
+          </p>
+          <div class="hero__cta">
+            <a class="btn btn-primary" href="#manutencao">Solicitar reparo</a>
+            <a class="btn btn-ghost" href="#produtos">Ver ofertas</a>
+          </div>
+          <dl class="hero__stats">
+            <div>
+              <dt>Clientes atendidos</dt>
+              <dd>+12k</dd>
+            </div>
+            <div>
+              <dt>Avaliação média</dt>
+              <dd>4.9/5</dd>
+            </div>
+            <div>
+              <dt>Tempo médio de reparo</dt>
+              <dd>24h</dd>
+            </div>
+          </dl>
+        </div>
+        <div class="hero__slider" aria-label="Destaques de serviços">
+          <button class="hero__control hero__control--prev" aria-label="Slide anterior">◀</button>
+          <div class="hero__slides">
+            <article class="hero-card" data-theme="green">
+              <span>Troca de tela</span>
+              <h2>Display impecável com garantia de fábrica</h2>
+            </article>
+            <article class="hero-card" data-theme="blue">
+              <span>Upgrade express</span>
+              <h2>SSD e memória para acelerar seu notebook</h2>
+            </article>
+            <article class="hero-card" data-theme="purple">
+              <span>Proteção total</span>
+              <h2>Planos de cobertura contra quedas e oxidação</h2>
+            </article>
+          </div>
+          <button class="hero__control hero__control--next" aria-label="Próximo slide">▶</button>
+        </div>
+      </section>
+
+      <section class="section" id="produtos">
+        <header class="section__header">
+          <h2>Produtos selecionados</h2>
+          <p>Smartphones novos e seminovos com garantia estendida e entrega imediata.</p>
+        </header>
+        <div class="grid grid--products">
+          <article class="product-card">
+            <div class="product-card__thumb" aria-hidden="true"></div>
+            <h3>Next X 5G 128GB</h3>
+            <p>Tela AMOLED, câmera tripla e performance de ponta.</p>
+            <span class="price">R$ 2.499</span>
+            <button class="btn btn-outline">Quero esse</button>
+          </article>
+          <article class="product-card">
+            <div class="product-card__thumb" aria-hidden="true"></div>
+            <h3>Next Lite 64GB</h3>
+            <p>O equilíbrio perfeito entre custo e desempenho.</p>
+            <span class="price">R$ 1.399</span>
+            <button class="btn btn-outline">Quero esse</button>
+          </article>
+          <article class="product-card">
+            <div class="product-card__thumb" aria-hidden="true"></div>
+            <h3>Next Ultra i7</h3>
+            <p>Processamento profissional para trabalho híbrido.</p>
+            <span class="price">R$ 4.899</span>
+            <button class="btn btn-outline">Quero esse</button>
+          </article>
+        </div>
+      </section>
+
+      <section class="section section--alt" id="manutencao">
+        <header class="section__header">
+          <h2>Manutenção especializada</h2>
+          <p>
+            Procedimentos transparentes, peças originais e laudos digitais em
+            todas as etapas do reparo.
+          </p>
+        </header>
+        <div class="grid grid--services">
+          <article class="info-card">
+            <div class="info-card__icon">🛠️</div>
+            <h3>Troca de componentes</h3>
+            <p>Displays, baterias, câmeras e conectores com garantia de 12 meses.</p>
+          </article>
+          <article class="info-card">
+            <div class="info-card__icon">💧</div>
+            <h3>Recuperação pós-oxidação</h3>
+            <p>Tratamento especializado para danos por líquido com relatório técnico.</p>
+          </article>
+          <article class="info-card">
+            <div class="info-card__icon">⚡</div>
+            <h3>Upgrade de performance</h3>
+            <p>SSD, memória e limpeza térmica para notebooks e PCs gamer.</p>
+          </article>
+          <article class="info-card">
+            <div class="info-card__icon">🔒</div>
+            <h3>Backup & segurança</h3>
+            <p>Proteção de dados, migração de arquivos e configuração de antivírus.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="suporte">
+        <header class="section__header">
+          <h2>Suporte ágil em todas as etapas</h2>
+          <p>Do agendamento ao acompanhamento, mantemos você informado em tempo real.</p>
+        </header>
+        <div class="timeline">
+          <div class="timeline__item">
+            <span class="timeline__step">1</span>
+            <h3>Diagnóstico digital</h3>
+            <p>Envie fotos e descrição do problema para receber orçamento em até 30 minutos.</p>
+          </div>
+          <div class="timeline__item">
+            <span class="timeline__step">2</span>
+            <h3>Retirada inteligente</h3>
+            <p>Motoboy Next ou visita agendada na loja com atendimento preferencial.</p>
+          </div>
+          <div class="timeline__item">
+            <span class="timeline__step">3</span>
+            <h3>Acompanhamento online</h3>
+            <p>Acesse o status em tempo real, fotos do reparo e chat direto com os técnicos.</p>
+          </div>
+          <div class="timeline__item">
+            <span class="timeline__step">4</span>
+            <h3>Entrega e pós-venda</h3>
+            <p>Teste assistido, nota fiscal digital e orientações personalizadas de uso.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--alt" id="garantia">
+        <header class="section__header">
+          <h2>Garantia e planos de proteção</h2>
+          <p>Transparência e segurança estendida para cada serviço ou produto Next Tech.</p>
+        </header>
+        <div class="plans">
+          <article class="plan-card">
+            <h3>Garantia Essencial</h3>
+            <p>90 dias de cobertura em serviços com suporte prioritário via WhatsApp.</p>
+            <ul>
+              <li>Checklist de 25 itens pós-reparo</li>
+              <li>Diagnóstico gratuito em novas ocorrências</li>
+              <li>Atualização de software inclusa</li>
+            </ul>
+            <button class="btn btn-primary">Contratar</button>
+          </article>
+          <article class="plan-card plan-card--highlight">
+            <div class="plan-card__tag">Mais escolhido</div>
+            <h3>Proteção Total</h3>
+            <p>12 meses de cobertura para danos acidentais e assistência 24h.</p>
+            <ul>
+              <li>Troca expressa de tela</li>
+              <li>Seguro contra roubo e furto</li>
+              <li>Suporte remoto ilimitado</li>
+            </ul>
+            <button class="btn btn-light">Saber mais</button>
+          </article>
+          <article class="plan-card">
+            <h3>Plano Business</h3>
+            <p>Gestão de parque tecnológico para empresas com SLA dedicado.</p>
+            <ul>
+              <li>Inventário e monitoramento de ativos</li>
+              <li>Relatórios mensais de performance</li>
+              <li>Equipe on-site sob demanda</li>
+            </ul>
+            <button class="btn btn-primary">Fale com vendas</button>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="sobre">
+        <header class="section__header">
+          <h2>Por que a Next Tech?</h2>
+          <p>Um ecossistema completo que reúne assistência técnica, loja e proteção digital.</p>
+        </header>
+        <div class="about">
+          <article class="about__card">
+            <h3>Experiência certificada</h3>
+            <p>Nossos técnicos são homologados pelas principais fabricantes e utilizam ferramentas de laboratório classe A.</p>
+          </article>
+          <article class="about__card">
+            <h3>Loja conceito</h3>
+            <p>Ambiente moderno com áreas de experimentação, acessórios premium e suporte imediato.</p>
+          </article>
+          <article class="about__card">
+            <h3>Comunidade conectada</h3>
+            <p>Workshops, conteúdos exclusivos e benefícios para clientes fidelidade Next Club.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section section--alt" id="contato">
+        <div class="contact">
+          <div class="contact__info">
+            <h2>Vamos cuidar da sua tecnologia?</h2>
+            <p>
+              A equipe Next Tech está pronta para diagnosticar, reparar e proteger
+              seus dispositivos com transparência e rapidez.
+            </p>
+            <ul class="contact__highlights">
+              <li>📞 (11) 99999-0000</li>
+              <li>📍 Av. Paulista, 1000 - São Paulo/SP</li>
+              <li>🕒 Seg a Sáb: 9h às 20h</li>
+            </ul>
+            <div class="social">
+              <a href="#" aria-label="Instagram"><span aria-hidden="true">IG</span></a>
+              <a href="#" aria-label="WhatsApp"><span aria-hidden="true">WA</span></a>
+              <a href="#" aria-label="YouTube"><span aria-hidden="true">YT</span></a>
+              <a href="#" aria-label="E-mail"><span aria-hidden="true">@</span></a>
+            </div>
+          </div>
+          <form class="contact__form">
+            <label>
+              Nome
+              <input type="text" name="nome" placeholder="Como podemos te chamar?" required />
+            </label>
+            <label>
+              E-mail
+              <input type="email" name="email" placeholder="seuemail@exemplo.com" required />
+            </label>
+            <label>
+              Tipo de serviço
+              <select name="servico" required>
+                <option value="" disabled selected>Selecione uma opção</option>
+                <option value="reparo">Reparo de smartphone</option>
+                <option value="notebook">Manutenção de notebook/PC</option>
+                <option value="proteção">Plano de proteção</option>
+                <option value="produto">Compra de produto</option>
+              </select>
+            </label>
+            <label>
+              Descreva sua necessidade
+              <textarea name="mensagem" rows="4" placeholder="Conte o que aconteceu com seu dispositivo"></textarea>
+            </label>
+            <button type="submit" class="btn btn-primary">Enviar mensagem</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer__brand">
+        <div class="footer__logo">Next<span>Tech</span></div>
+        <p>Assistência técnica especializada, loja e proteção para seus dispositivos.</p>
+      </div>
+      <div class="footer__links">
+        <div>
+          <h4>Atendimento</h4>
+          <a href="tel:+5511999990000">(11) 99999-0000</a>
+          <a href="mailto:contato@next-tech.website">contato@next-tech.website</a>
+          <a href="#suporte">Chat com suporte</a>
+        </div>
+        <div>
+          <h4>Institucional</h4>
+          <a href="#sobre">Sobre</a>
+          <a href="#garantia">Garantia</a>
+          <a href="#contato">Contato</a>
+        </div>
+      </div>
+      <p class="footer__copy">© <span id="year"></span> Next Tech. Todos os direitos reservados.</p>
+    </footer>
+
+    <button class="scroll-top" type="button" aria-label="Voltar ao topo">
+      <span>▲</span>
+    </button>
+
+    <script src="script.js" defer></script>
+  </body>
+</html>
